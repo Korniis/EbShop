@@ -14,7 +14,9 @@ namespace Product.Infrastructure.Configs
         public void Configure(EntityTypeBuilder<Domain.Entity.Product> builder)
         {
             builder.ToTable($"t_{nameof(Product.Domain.Entity.Product).ToLower()}");
+            builder.HasQueryFilter(p => !p.Deleted);
             builder.HasMany(x => x.Variants).WithOne(x => x.Product).HasForeignKey(x => x.ProductId);
+            
 
         }
     }

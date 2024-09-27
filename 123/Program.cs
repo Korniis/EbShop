@@ -1,8 +1,5 @@
 
-using Microsoft.EntityFrameworkCore;
-using Product.Infrastructure.DbContexts;
-
-namespace Product.WebApi
+namespace _123
 {
     public class Program
     {
@@ -16,11 +13,6 @@ namespace Product.WebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<ProductDbContext>(opt =>
-            {
-                string connStr = builder.Configuration.GetConnectionString("Default");
-                opt.UseMySql(connStr, new MySqlServerVersion(new Version(8, 6, 20)));
-            });
 
             var app = builder.Build();
 
@@ -35,7 +27,7 @@ namespace Product.WebApi
 
             app.UseAuthorization();
 
-            
+
             app.MapControllers();
 
             app.Run();

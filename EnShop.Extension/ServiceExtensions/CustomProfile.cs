@@ -2,7 +2,7 @@
 using EnShop.Model.DTO;
 using EnShop.Model.UserModel;
 
-namespace EnShop.Api.Extensions
+namespace EnShop.Extension.ServiceExtensions
 {
     public class CustomProfile : Profile
     {

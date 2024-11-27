@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnShop.IService\EnShop.IService.csproj" />
+    <ProjectReference Include="..\EnShop.Model\EnShop.Model.csproj" />
+    <ProjectReference Include="..\EnShop.Repository\EnShop.Repository.csproj" />
+    <ProjectReference Include="..\EnShop\EnShop.Service.csproj" />
+  </ItemGroup>
+
+</Project>

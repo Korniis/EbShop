@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace EnShop.Api.Extensions
+namespace EnShop.Extension.ServiceExtensions
 {
     public class AutoMapperConfig
     {

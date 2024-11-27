@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EnShop.Common\EnShop.Common.csproj" />
+    <ProjectReference Include="..\EnShop.Extension\EnShop.Extension.csproj" />
     <ProjectReference Include="..\EnShop.Model\EnShop.Model.csproj" />
     <ProjectReference Include="..\EnShop\EnShop.Service.csproj" />
   </ItemGroup>

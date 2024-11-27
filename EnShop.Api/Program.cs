@@ -1,6 +1,8 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using EnShop.Api.Extensions;
+using EnShop.Common;
+using EnShop.Common.Option;
 using EnShop.Extension.ServiceExtensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -30,6 +32,11 @@ namespace EnShop.Api
             // builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
             AutoMapperConfig.RegiestMappers();
+            builder.Services.AddSingleton(new AppSettings(builder.Configuration));
+            ConfigurableOptions.ConfigureApplication(builder.Configuration);
+            builder.Services.AddAllOptionRegister();
+            
+
             /*     builder.Services.AddScoped<IUserRepository, UserRepository>();
                  builder.Services.AddScoped<IUserService, UserService>();
                  builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
